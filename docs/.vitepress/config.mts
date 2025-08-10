@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   base: 'docs/.vitepress/config.mts',
-  title: "iniWM",
+  title: "/iniwm/",
   description: "Documentation for the iniWM window manager",
   themeConfig: {
     nav: [
