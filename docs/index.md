@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "iniWM"
-  text: "A wiki for Iniwm window manager"
+  text: "Hi! Welcome to iniwm documentetion"
   tagline: First WM with ini config
   actions:
     - theme: brand
