@@ -1,0 +1,297 @@
+/* docs/.vitepress/theme/style.css */
+
+/* Import Google Font if you want to use it (add to <head> via config if needed) */
+/* @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;900&display=swap'); */
+
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+
+/* --- Custom Color Palette based on hyprpicker --- */
+/* Darkest: #0D140D */
+/* Darker:  #202C20 */
+/* Dark:    #2D3E2D */
+/* Medium:  #3A503A */
+/* Light:   #4B684B */
+/* Lighter: #6B946B */
+/* Accent:  #ABC2AB */
+
+/**
+ * Colors
+ *
+ * Using the hyprpicker colors:
+ * - Brand (Greenish): #4B684B (medium), #6B946B (lighter), #2D3E2D (dark)
+ * - Background/Neutral: #0D140D (darkest), #202C20 (darker)
+ * - Text: #ABC2AB (lightest), #6B946B (lighter)
+ *
+ * Default Grayscale adapted to fit the theme (optional, using base colors)
+ * - Gray-1 (text): #ABC2AB
+ * - Gray-2 (hover): #6B946B
+ * - Gray-3 (bg element): #3A503A
+ * - Gray-soft (subtle bg): rgba(58, 80, 58, 0.2) ~ #3A503A with low opacity
+ *
+ * Brand adapted to fit the theme
+ * - Brand-1 (text/link): #6B946B
+ * - Brand-2 (hover): #4B684B
+ * - Brand-3 (bg): #2D3E2D
+ * - Brand-soft (subtle bg): rgba(75, 104, 75, 0.2) ~ #4B684B with low opacity
+ *
+ * You can adjust the 'soft' colors if needed for better contrast.
+ */
+
+
+/* --- Dark Theme --- */
+:root {
+  /* Base Colors - Adapted to your palette */
+  --vp-c-white: #ffffff;
+  --vp-c-black: #000000;
+
+  /* Gray/Neutral Scale - Based on your colors */
+  --vp-c-gray-1: #ABC2AB; /* Lightest - Main text */
+  --vp-c-gray-2: #6B946B; /* Lighter - Hover states, secondary text */
+  --vp-c-gray-3: #3A503A; /* Medium - Borders, subtle UI elements */
+  /* --vp-c-gray-soft is defined below based on gray-3 */
+
+  /* Brand Color Scale - Using your greens */
+  --vp-c-brand-1: #6B946B; /* Lighter green - Links, primary text accents */
+  --vp-c-brand-2: #4B684B; /* Medium green - Button hover, active states */
+  --vp-c-brand-3: #2D3E2D; /* Darker green - Button backgrounds, highlights */
+  /* --vp-c-brand-soft is defined below based on brand-3 */
+
+  /* Semantic Colors - Mapping to your palette */
+  --vp-c-default-1: var(--vp-c-gray-1);     /* Default text */
+  --vp-c-default-2: var(--vp-c-gray-2);     /* Default hover */
+  --vp-c-default-3: var(--vp-c-gray-3);     /* Default subtle bg elements */
+  --vp-c-default-soft: rgba(58, 80, 58, 0.2); /* Subtle background (gray-3 with opacity) */
+
+  --vp-c-brand: var(--vp-c-brand-1);        /* Fallback brand */
+  --vp-c-brand-light: var(--vp-c-brand-2);  /* Fallback brand light */
+  --vp-c-brand-dark: var(--vp-c-brand-3);   /* Fallback brand dark */
+  --vp-c-brand-soft: rgba(75, 104, 75, 0.2); /* Subtle brand background (brand-3 with opacity) */
+
+
+  /* Tip/Info (using brand color as default) */
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  /* Warning (you can choose a different color if needed) */
+  --vp-c-warning-1: #e2a03f; /* Amber 1 */
+  --vp-c-warning-2: #e7aa52; /* Amber 2 */
+  --vp-c-warning-3: #f0c062; /* Amber 3 */
+  --vp-c-warning-soft: rgba(226, 160, 63, 0.2); /* Amber soft */
+
+  /* Danger/Error (you can choose a different color if needed) */
+  --vp-c-danger-1: #e55564; /* Red 1 */
+  --vp-c-danger-2: #ec6870; /* Red 2 */
+  --vp-c-danger-3: #f37d7d; /* Red 3 */
+  --vp-c-danger-soft: rgba(229, 85, 100, 0.2); /* Red soft */
+
+
+  /* --- Background Colors --- */
+  /* Main background */
+  --vp-c-bg: #0D140D; /* Darkest */
+  /* Soft background (e.g., code blocks, custom containers) */
+  --vp-c-bg-soft: #202C20; /* Darker */
+  /* Alt background (e.g., sidebar, blockquote) */
+  --vp-c-bg-alt: #202C20; /* Darker */
+
+
+  /* --- Text Colors --- */
+  /* Default text */
+  --vp-c-text-1: #ABC2AB; /* Lightest */
+  /* Muted text */
+  --vp-c-text-2: #6B946B; /* Lighter */
+  /* Lightest text (e.g., placeholders) */
+  --vp-c-text-3: #4B684B; /* Medium */
+
+
+  /* --- Borders --- */
+  --vp-c-divider: #3A503A; /* Medium */
+  --vp-c-gutter: #0D140D; /* Darkest */
+
+
+  /* --- Misc --- */
+  --vp-c-control: #2D3E2D; /* Darker green */
+  --vp-c-control-hover: #3A503A; /* Medium green */
+
+
+}
+
+.VPButton.brand {
+    border-radius: 0.5rem !important; 
+    border: 1px solid black;
+    font-size: 1.2rem !important;
+    font-weight: bold !important; 
+    padding: 0 5px !important;
+}
+
+.VPButton.brand:hover {
+    border-radius: 5rem !important; /* Apply your desired radius */
+    transition: all 0.65s ease-in-out;
+    /* You can add other custom styles here too if needed */
+    /* Example: font-weight: bold; */
+}
+
+video {
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--vp-c-divider);
+  max-width: 100%;
+  height: auto;
+}
+
+:root[data-theme="light"] {
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f6f6f7;
+  --vp-c-bg-alt: #f1f1f1;
+
+  --vp-c-text-1: #213547;
+  --vp-c-text-2: #374151;
+  --vp-c-text-3: #4b5563;
+
+  --vp-c-divider: #e5e7eb;
+  --vp-c-gutter: #e5e7eb;
+
+  --vp-c-control: #ffffff;
+  --vp-c-control-hover: #f6f6f7;
+
+  --vp-c-brand-1: #4B684B;
+  --vp-c-brand-2: #3A503A;
+  --vp-c-brand-3: #2D3E2D;
+  --vp-c-brand-soft: rgba(75, 104, 75, 0.14);
+
+  --vp-c-warning-1: #e2a03f;
+  --vp-c-warning-2: #e7aa52;
+  --vp-c-warning-3: #f0c062;
+  --vp-c-warning-soft: rgba(226, 160, 63, 0.14);
+
+  --vp-c-danger-1: #e55564;
+  --vp-c-danger-2: #ec6870;
+  --vp-c-danger-3: #f37d7d;
+  --vp-c-danger-soft: rgba(229, 85, 100, 0.14);
+
+  --vp-c-default-1: var(--vp-c-text-1);
+  --vp-c-default-2: #e5e7eb;
+  --vp-c-default-3: #e5e7eb;
+  --vp-c-default-soft: rgba(229, 231, 235, 0.5);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  /* Brand Buttons */
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white); /* White text on brand */
+  --vp-button-brand-bg: var(--vp-c-brand-3); /* Darker green bg */
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2); /* Medium green hover */
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1); /* Lighter green active */
+  --vp-button-brand-border-radius: 1rem;
+
+  /* Default Buttons */
+  --vp-button-alt-border: var(--vp-c-gray-3); /* Medium gray border */
+  --vp-button-alt-text: var(--vp-c-gray-1);   /* Lightest gray text */
+  --vp-button-alt-bg: transparent;            /* Transparent bg */
+  --vp-button-alt-hover-border: var(--vp-c-gray-2); /* Lighter gray border hover */
+  --vp-button-alt-hover-text: var(--vp-c-gray-2);   /* Lighter gray text hover */
+  --vp-button-alt-hover-bg: var(--vp-c-bg-soft);    /* Soft bg hover */
+  --vp-button-alt-active-border: var(--vp-c-gray-1); /* Lightest gray border active */
+  --vp-button-alt-active-text: var(--vp-c-gray-1);   /* Lightest gray text active */
+  --vp-button-alt-active-bg: var(--vp-c-bg-alt);     /* Alt bg active */
+}
+
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  /* Hero text gradient */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #4B684B 30%, /* Medium green */
+    #6B946B      /* Lighter green */
+  );
+
+  /* Hero image background (if used) */
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #2D3E2D 50%, /* Darker green */
+    #4B684B 50%  /* Medium green */
+  );
+  --vp-home-hero-image-filter: blur(20px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+
+/**
+ * Component: Custom Block (e.g., tip, warning, danger notes)
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1); /* Use main text color */
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft); /* Subtle brand background */
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft); /* Code bg in tip */
+
+  /* You can style warning/danger blocks similarly if needed */
+  /* --vp-custom-block-warning-border: ... */
+  /* --vp-custom-block-warning-text: ... */
+  /* --vp-custom-block-warning-bg: ... */
+  /* --vp-custom-block-warning-code-bg: ... */
+}
+
+
+/**
+ * Component: Algolia Search
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand-1) !important; /* Use brand color */
+  /* You might need to adjust other DocSearch variables for full integration */
+}
+
+
+/* --- General Styling --- */
+
+/* Apply the font */
+* {
+  font-family: 'JetBrains Mono', monospace; /* Ensure fallback */
+  font-weight: 900; /* Adjust weight - 900 might be too heavy for body text */
+}
+
+/* Adjust code block background to match your dark theme */
+.dark .vp-doc [class*='language-'] code,
+.dark .vp-doc [class*='language-'] pre {
+  background-color: var(--vp-c-bg-soft); /* Use soft background */
+  /* color is usually handled by Shiki theme */
+}
+
+/* Adjust link color to use brand */
+.vp-doc a {
+    color: var(--vp-c-brand-1); /* Use lighter green for links */
+    text-decoration: underline; /* Add underline for clarity */
+}
+.vp-doc a:hover {
+    color: var(--vp-c-brand-2); /* Use medium green on hover */
+}
