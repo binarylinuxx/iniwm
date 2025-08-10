@@ -5,6 +5,11 @@ export default defineConfig({
   base: '/iniwm/',
   title: "IniWM",
   description: "Documentation for the iniWM window manager",
+  lastUpdated: true,
+  cleanUrls: true,
+  ead: [
+      ["link", { rel: "icon", href: "iniwm.svg" }],
+    ],
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
