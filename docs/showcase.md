@@ -1,4 +1,4 @@
-# Rice By [blx](https://codeberg.org/blx)
+# Rice By [blx](https://codeberg.org/blx) (Main DEV)
 
 <video controls width="890">
   <source src="/assets/output.mp4" type="video/mp4">
