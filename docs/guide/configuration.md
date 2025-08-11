@@ -114,7 +114,6 @@ Example bindings:
 Mod4+j=focus_next
 Mod4+k=focus_prev
 Mod4+q=kill_active
-Mod4+f=toggle_floating
 ```
 
 #### Layout Management
@@ -195,12 +194,7 @@ IniWM supports four different window layouts:
 - Switch between windows using focus commands
 - Perfect for single-application workflows
 
-### 3. Floating Layout
-- Windows can be moved and resized freely
-- Manual positioning and sizing required
-- Similar to traditional desktop environments
-
-### 4. Grid Layout
+### 3. Grid Layout
 - Windows arranged in an automatic grid pattern
 - Grid dimensions calculated based on window count
 - Equal space allocation for all windows

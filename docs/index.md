@@ -13,8 +13,8 @@ hero:
       text: Showcase
       link: /showcase
 features:
-  - title: 4 Layouts
-    details: Monocle, Tiling, Floating, Grid - all supported.
+  - title: 3 Layouts
+    details: Monocle, Tiling, Grid - all supported.
   - title: Easy to Reload
     details: Apply config changes without restarting. Just run `kill -USR1 $(pgrep iniwm)`.
   - title: Easy to Configure
@@ -27,4 +27,4 @@ features:
 
 `iniWM` is designed to be a fast and lightweight window manager that prioritizes simplicity in configuration. Unlike many tiling WMs that require complex scripting or configuration languages, `iniWM` uses the straightforward INI format, making it easy to understand and customize.
 
-Inspired by the classic master-stack layout(most known in dwm,qtile), it provides a focused workspace with one primary window and a stack for secondary ones, while also offering Monocle, Floating, and Grid layouts for flexibility.
+Inspired by the classic master-stack layout(most known in dwm,qtile), it provides a focused workspace with one primary window and a stack for secondary ones, while also offering Monocle, and Grid layouts for flexibility.
