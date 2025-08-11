@@ -49,11 +49,11 @@ active-border=#005577
 fullscreen-border=#000000
 ```
 
-- **inactive-border**: Color for unfocused windows (default: `#444444`)
-- **active-border**: Color for the focused window (default: `#005577`)
-- **fullscreen-border**: Color for fullscreen windows (default: `#000000`)
+- **inactive-border**: Color for unfocused windows (default: `444444`)
+- **active-border**: Color for the focused window (default: `005577`)
+- **fullscreen-border**: Color for fullscreen windows (default: `000000`)
 
-Colors can be specified with or without the `#` prefix.
+Colors are ``HEX`` format but dont use ``#`` because wm parsing ``#`` as comment.
 
 ### Layout Settings
 
