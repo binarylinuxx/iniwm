@@ -44,9 +44,9 @@ margin-out=10
 Configure border colors using hexadecimal color codes:
 
 ```ini
-inactive-border=#444444
-active-border=#005577
-fullscreen-border=#000000
+inactive-border=444444
+active-border=005577
+fullscreen-border=000000
 ```
 
 - **inactive-border**: Color for unfocused windows (default: `444444`)
@@ -54,6 +54,7 @@ fullscreen-border=#000000
 - **fullscreen-border**: Color for fullscreen windows (default: `000000`)
 
 Colors are ``HEX`` format but dont use ``#`` because wm parsing ``#`` as comment.
+if colors somehow failed to parse fallback colors described ahead
 
 ### Layout Settings
 

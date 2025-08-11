@@ -15,3 +15,12 @@ not enough wallpaper or want more cool desktop?
 **Bars:**
 - Currently lemonbar the best.
 - Polybar/eww giving errors either terribly fails.
+
+**Wallpapers:**
+- feh Simple CLI.
+- nitrogen wallpaper setter gui.
+- Waypaper feh wallpaper backend support.
+
+**App Launchers:**
+- dmenu_run.
+- others not tested.
