@@ -1,5 +1,10 @@
 # List Of Useful tools you maybe like:
 
+``
+::: NOTE
+if something not included is either not work or not tested.
+``
+
 **Desk Widgets:** 
 not enough wallpaper or want more cool desktop?
 - conky Easy to use and easy to integrate with custom scripts.
@@ -14,7 +19,8 @@ not enough wallpaper or want more cool desktop?
 
 **Bars:**
 - Currently lemonbar the best.
-- Polybar/eww giving errors either terribly fails.
+- tint2.
+- tint2conf tint2 panel configurator.
 
 **Wallpapers:**
 - feh Simple CLI.
@@ -24,3 +30,6 @@ not enough wallpaper or want more cool desktop?
 **App Launchers:**
 - dmenu_run.
 - others not tested.
+
+**Dock:**
+- cairo-dock.
