@@ -25,6 +25,12 @@ make build
 sudo make install
 ```
 
+ARCH:
+```
+wget https://codeberg.org/blx/iniWM/src/branch/MAIN/PKGBUILD
+sudo makepkg -si
+```
+
 ::: tip 
 if not using Any Display manager add iniwm
 to ~/.xinitrc and exec with startx

@@ -30,6 +30,7 @@ export default defineConfig({
         text: 'Guides',
         items: [
           { text: 'Cool tools!!', link: '/guide/tools' }, 
+          { text: 'IPC Client', link: '/guide/ipc' }, 
         ]
       },
       {
